@@ -109,12 +109,30 @@ public class Main {
         System.out.println(Book);
     }
 
+    public void DeleteAddress(){
+        System.out.println(Book);
+
+        System.out.println("Enter the Email ID whose details you want to Delete ");
+        String email = sc.next();
+
+        for (int i = 0; i < Book.size(); i++){
+            System.out.println("Select form below, to change: ");
+            if (Book.get(i).getEmail().equals(email)) {
+                Book.remove(i);
+            }
+            else {
+                System.out.println("Enter a valid email ID");
+            }
+        }
+        System.out.println(Book);
+    }
+
     public static void main(String[] args) {
         System.out.println("Welcome To Address Book System.");
         Main addressbook = new Main();
 
         while (true) {
-            System.out.println("1.AddDetails\t3:Edit Detaild\t2:Display");
+            System.out.println("1.AddDetails\t2:Edit Details\t3:Display\t4DeleteAddress");
             int option = sc.nextInt();
             switch (option) {
                 case 1:
@@ -126,6 +144,8 @@ public class Main {
                 case 3:
                     addressbook.Display();
                     break;
+                case 4:
+                    addressbook.DeleteAddress();
             }
         }
     }
