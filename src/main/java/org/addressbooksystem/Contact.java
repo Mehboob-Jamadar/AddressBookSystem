@@ -2,19 +2,20 @@ package org.addressbooksystem;
 
 public class Contact {
     private String firstname, lastname, address, city, state, email;
-    private int zip, phonenumber;
+    private int zip;
+    private long phonenumber;
 
-    public Contact(String firstname, String lastname, String address, String city, String state,
-                   String email, int zip, int phonenumber) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.email = email;
-        this.zip = zip;
-        this.phonenumber = phonenumber;
-    }
+//    public Contact(String firstname, String lastname, String address, String city, String state,
+//                   String email, int zip, int phonenumber) {
+//        this.firstname = firstname;
+//        this.lastname = lastname;
+//        this.address = address;
+//        this.city = city;
+//        this.state = state;
+//        this.email = email;
+//        this.zip = zip;
+//        this.phonenumber = phonenumber;
+//    }
 
     public String getFirstname() {
         return firstname;
@@ -72,11 +73,11 @@ public class Contact {
         this.zip = zip;
     }
 
-    public int getPhonenumber() {
+    public long getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhonenumber(int phonenumber) {
+    public void setPhonenumber(long phonenumber) {
         this.phonenumber = phonenumber;
     }
 
